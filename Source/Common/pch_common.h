@@ -38,8 +38,6 @@
 #include <thread>
 #include <unordered_map>
 #include <vector>
-#include <codecvt>
-#include <iomanip>
 
 #if HC_UWP_API
 #include <collection.h>

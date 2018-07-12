@@ -165,10 +165,10 @@ std::chrono::seconds GetRetryAfterHeaderTime(_In_ HC_CALL* call)
     if (it != call->responseHeaders.end())
     {
         int value = 0;
-        http_internal_stringstream ss(it->second);
-        ss >> value;
+        //http_internal_stringstream ss(it->second);
+        //ss >> value;
 
-        if (!ss.fail())
+        //if (!ss.fail())
         {
             if (value > RETRY_AFTER_CAP_IN_SEC)
             {

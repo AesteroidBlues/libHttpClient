@@ -30,7 +30,7 @@ bool StringToUint4(char const* begin, char const* end, uint64_t& v, int32_t base
     v = 0;
 
     char* readTo = nullptr;
-    uint64_t n = std::strtoull(begin, &readTo, base);
+    uint64_t n = 0; // std::strtoull(begin, &readTo, base);
 
     if (n == 0 && readTo == begin) // could not convert
     {
@@ -53,19 +53,19 @@ bool StringToUint4(char const* begin, char const* end, uint64_t& v, int32_t base
 
 void BasicAsciiLowercase(String& s)
 {
-    static std::locale const classicLocale = std::locale::classic();
-    std::transform(s.begin(), s.end(), s.begin(), [](char c)
-    {
-        if ((c & 0x7F) == c)
-        {
-            return std::tolower(c, classicLocale);
-        }
-        else
-        {
-            assert(false);
-            return c;
-        }
-    });
+    //static std::locale const classicLocale = std::locale::classic();
+    //d::transform(s.begin(), s.end(), s.begin(), [](char c)
+    //
+    //  if ((c & 0x7F) == c)
+    //  {
+    //      return std::tolower(c, classicLocale);
+    //  }
+    //  else
+    //  {
+    //      assert(false);
+    //      return c;
+    //  }
+    //});
 }
 
 bool StringToUint(String const& s, uint64_t& v, int32_t base)

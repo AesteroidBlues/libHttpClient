@@ -4,7 +4,7 @@
 #pragma once
 #include <new>
 #include <stddef.h>
-#include <sstream>
+//#include <sstream>
 
 NAMESPACE_XBOX_HTTP_CLIENT_BEGIN
 
